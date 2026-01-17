@@ -1,5 +1,5 @@
 """
-TaHo Analytics API - FastAPI Application
+Wiii Analytics API - FastAPI Application
 SOTA: RESTful API for trading analytics
 
 Endpoints:
@@ -21,8 +21,8 @@ logger = logging.getLogger(__name__)
 
 # Create FastAPI app
 app = FastAPI(
-    title="TaHo Analytics API",
-    description="Trading performance analytics for TaHo Trader",
+    title="Wiii Analytics API",
+    description="Trading performance analytics for Wiii Trader",
     version="1.0.0"
 )
 
@@ -49,7 +49,7 @@ async def health_check():
     return {
         "status": "healthy",
         "timestamp": datetime.utcnow().isoformat(),
-        "service": "taho-analytics"
+        "service": "wiii-analytics"
     }
 
 

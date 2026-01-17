@@ -1,12 +1,14 @@
-# TaHo Analytics System
+# Wiii Analytics System
 
-Trading performance analytics for TaHo Trader.
+Trading performance analytics for Wiii Trader.
 
 ## Features
 
 - **Time Analysis**: Hourly and daily P&L breakdown
 - **Symbol Analysis**: Per-token performance metrics
 - **Fee Analysis**: Commission and funding impact
+- **Risk Metrics**: Sharpe, Sortino, Drawdown, Profit Factor
+- **Market Regime**: Volatility, Trend, Performance detection
 
 ## Deployment
 
@@ -31,18 +33,19 @@ BINANCE_API_SECRET=your-api-secret
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
-| `/health` | GET | Health check (UptimeRobot) |
+| `/health` | GET | Health check |
 | `/collect` | POST | Trigger data collection |
-| `/analytics/daily` | GET | Daily P&L history |
-| `/analytics/hourly` | GET | Performance by hour |
+| `/analytics/daily` | GET | Daily P&L |
+| `/analytics/hourly` | GET | Hourly performance |
 | `/analytics/symbols` | GET | Per-symbol stats |
 | `/analytics/fees` | GET | Fee breakdown |
-| `/analytics/summary` | GET | All-in-one summary |
+| `/analytics/risk` | GET | Risk metrics |
+| `/analytics/regime` | GET | Market regime |
+| `/analytics/full-report` | GET | Complete report |
 
 ## Local Development
 
 ```bash
-cd taho-analytics
 pip install -r requirements.txt
 python -m src.api.main
 ```
@@ -50,11 +53,11 @@ python -m src.api.main
 ## Project Structure
 
 ```
-taho-analytics/
+wiii-analytics/
 ├── src/
 │   ├── api/main.py         # FastAPI app
 │   ├── collectors/         # Binance data fetching
-│   ├── analyzers/          # Time/Symbol/Fee analysis
+│   ├── analyzers/          # Time/Symbol/Risk analysis
 │   └── database/           # Supabase client
 ├── requirements.txt
 ├── render.yaml

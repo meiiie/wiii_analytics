@@ -1,7 +1,7 @@
 # Render.com deployment configuration
 services:
   - type: web
-    name: taho-analytics
+    name: wiii-analytics
     runtime: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn src.api.main:app --host 0.0.0.0 --port $PORT
