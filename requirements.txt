@@ -8,8 +8,8 @@ uvicorn[standard]==0.27.0
 # Database (SOTA: Updated for new sb_secret_ key format)
 supabase>=2.18.0
 
-# HTTP client for Binance API (compatible with supabase)
-httpx>=0.24,<0.26
+# HTTP client for Binance API (compatible with supabase 2.18+)
+httpx>=0.26,<0.29
 
 # Environment variables
 python-dotenv==1.0.0
