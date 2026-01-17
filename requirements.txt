@@ -1,0 +1,19 @@
+# TaHo Analytics System
+# Requirements for Render.com deployment
+
+# Web framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Database
+supabase==2.4.0
+
+# HTTP client for Binance API (compatible with supabase)
+httpx>=0.24,<0.26
+
+# Environment variables
+python-dotenv==1.0.0
+
+# HMAC for Binance signature
+# (built-in hashlib and hmac)
+
